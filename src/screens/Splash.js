@@ -10,11 +10,11 @@ const Splash = () => {
     const value = AsyncStorage.getItem('Splash');
     if (value === null || value !== 'true') {
       setTimeout(() => {
-        navigation.replace('Home');
+        navigation.replace('List');
       }, 3000);
     } else {
       setTimeout(() => {
-        navigation.replace('Home');
+        navigation.replace('List');
       }, 3000);
     }
   }, []);

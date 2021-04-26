@@ -16,6 +16,8 @@ target 'lottie' do
 
   pod 'react-native-safe-area-context', :path => '../node_modules/react-native-safe-area-context'
 
+  pod 'RNReanimated', :path => '../node_modules/react-native-reanimated'
+
   target 'lottieTests' do
     inherit! :complete
     # Pods for testing

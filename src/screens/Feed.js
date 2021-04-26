@@ -14,8 +14,10 @@ import colors from '../constants/colors';
 const Header = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.logo}>Tustoz</Text>
-      <TouchableOpacity>
+      <View>
+        <Text style={styles.logo}>Instagram</Text>
+      </View>
+      {/* <TouchableOpacity>
         <Icon name="home" type="font-awesome" color={colors.black} />
       </TouchableOpacity>
       <TouchableOpacity>
@@ -23,20 +25,25 @@ const Header = () => {
       </TouchableOpacity>
       <TouchableOpacity>
         <Icon name="compass" type="font-awesome" color={colors.black} />
-      </TouchableOpacity>
-      <TouchableOpacity>
-        <Icon name="heart-o" type="font-awesome" color={colors.black} />
-      </TouchableOpacity>
-      <TouchableOpacity>
-        <Avatar
-          size="small"
-          rounded
-          source={{
-            uri:
-              'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
-          }}
-        />
-      </TouchableOpacity>
+      </TouchableOpacity> */}
+      <View style={{flexDirection: 'row', alignItems: 'center'}}>
+        <TouchableOpacity>
+          <Icon
+            name="heart-o"
+            type="font-awesome"
+            color={colors.black}
+            style={{marginHorizontal: 10, marginVertical: 5}}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <Icon
+            name="envelope"
+            type="font-awesome-5"
+            color={colors.black}
+            style={{marginHorizontal: 5, marginVertical: 5}}
+          />
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
@@ -108,7 +115,7 @@ const Status = () => {
   );
 };
 
-const Timeline = ({someone}) => {
+const Timeline = () => {
   return (
     <View>
       <View style={styles.header}>
@@ -199,7 +206,7 @@ const Timeline = ({someone}) => {
             paddingHorizontal: 17,
             paddingVertical: 5,
             flexWrap: 'wrap',
-            paddingBottom: 20
+            paddingBottom: 20,
           }}>
           <Text style={styles.title}>maxi aditya</Text>
           <Text style={styles.text}>
@@ -214,7 +221,7 @@ const Timeline = ({someone}) => {
     </View>
   );
 };
-const Home = () => {
+const Feed = () => {
   return (
     <SafeAreaView style={styles.page}>
       <StatusBar
@@ -233,7 +240,7 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Feed;
 
 const styles = StyleSheet.create({
   page: {
@@ -267,7 +274,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 10,
     alignItems: 'center',
-    borderTopWidth: 0.2
   },
   text: {
     fontSize: 14,
