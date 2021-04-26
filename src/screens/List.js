@@ -62,6 +62,10 @@ const List = () => {
         title="[Social Media] Profile"
         onPress={() => navigation.navigate('Profile')}
       />
+      <Box
+        title="[Social Media] Messages"
+        onPress={() => navigation.navigate('Messages')}
+      />
     </SafeAreaView>
   );
 };

@@ -20,6 +20,10 @@ import Profile from '../screens/Profile';
 import Feed from '../screens/Feed';
 import colors from '../constants/colors';
 import Tags from '../screens/Tags';
+import Messages from '../screens/Messages';
+import Primary from '../screens/Primary';
+import General from '../screens/General';
+import Requests from '../screens/Requests';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -107,6 +111,10 @@ const Router = () => {
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="Tags" component={Tags} />
       <Stack.Screen name="Profile" component={Profile} />
+      <Stack.Screen name="Messages" component={Messages} />
+      <Stack.Screen name="Primary" component={Primary} />
+      <Stack.Screen name="General" component={General} />
+      <Stack.Screen name="Request" component={Requests} />
     </Stack.Navigator>
   );
 };

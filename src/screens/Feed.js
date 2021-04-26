@@ -1,4 +1,5 @@
-import React, {useEffect, useState} from 'react';
+import {useNavigation} from '@react-navigation/core';
+import React from 'react';
 import {
   StyleSheet,
   SafeAreaView,
@@ -7,11 +8,13 @@ import {
   View,
   Text,
 } from 'react-native';
-import {Icon, Avatar, Image} from 'react-native-elements';
+import {Icon, Avatar} from 'react-native-elements';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import colors from '../constants/colors';
 
 const Header = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
       <View>
@@ -35,10 +38,10 @@ const Header = () => {
             style={{marginHorizontal: 10, marginVertical: 5}}
           />
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Messages', { screen: 'Messages' })}>
           <Icon
-            name="envelope"
-            type="font-awesome-5"
+            name="messenger"
+            type="fontisto"
             color={colors.black}
             style={{marginHorizontal: 5, marginVertical: 5}}
           />

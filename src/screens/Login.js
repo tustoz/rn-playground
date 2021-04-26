@@ -35,7 +35,7 @@ const Login = ({navigation}) => {
           onChangeText={password => setPass(password)}
           secureTextEntry={true}
         />
-        <Button title="Login" onPress={() => navigation.navigate('Home')} />
+        <Button title="Login" onPress={() => navigation.navigate('BottomTabs')} />
         <Text
           style={{
             fontSize: 20,
