@@ -24,6 +24,12 @@ import Messages from '../screens/Messages';
 import Primary from '../screens/Primary';
 import General from '../screens/General';
 import Requests from '../screens/Requests';
+import EmailPass from '../screens/EmailPass';
+import Anonymous from '../screens/Anonymous';
+import Google from '../screens/Google';
+import Phone from '../screens/Phone';
+import Admob from '../screens/Admob';
+import Signup from '../screens/Signup';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -109,12 +115,18 @@ const Router = () => {
       <Stack.Screen name="Ghibli" component={Ghibli} />
       <Stack.Screen name="Contacts" component={Contacts} />
       <Stack.Screen name="Login" component={Login} />
+      <Stack.Screen name="Signup" component={Signup} />
       <Stack.Screen name="Tags" component={Tags} />
       <Stack.Screen name="Profile" component={Profile} />
       <Stack.Screen name="Messages" component={Messages} />
       <Stack.Screen name="Primary" component={Primary} />
       <Stack.Screen name="General" component={General} />
       <Stack.Screen name="Request" component={Requests} />
+      <Stack.Screen name="Anonymous" component={Anonymous} />
+      <Stack.Screen name="EmailPass" component={EmailPass} />
+      <Stack.Screen name="Google" component={Google} />
+      <Stack.Screen name="Phone" component={Phone} />
+      <Stack.Screen name="Admob" component={Admob} />
     </Stack.Navigator>
   );
 };

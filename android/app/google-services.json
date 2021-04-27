@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "216414842406",
+    "project_id": "lottie-9e100",
+    "storage_bucket": "lottie-9e100.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:216414842406:android:bbdac30108ce61bf0dc0e7",
+        "android_client_info": {
+          "package_name": "com.lottie"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "216414842406-c8kp20u16tm799o2ttjl2pjnm7rc4mrp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBudeB4SWcUdrjsdTVlGUnkM0tqBlV4NIY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "216414842406-c8kp20u16tm799o2ttjl2pjnm7rc4mrp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

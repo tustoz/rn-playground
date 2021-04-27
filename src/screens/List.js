@@ -51,6 +51,10 @@ const List = () => {
         onPress={() => navigation.navigate('Ghibli')}
       />
       <Box
+        title="[Social Media] Signup"
+        onPress={() => navigation.navigate('Signup')}
+      />
+      <Box
         title="[Social Media] Login"
         onPress={() => navigation.navigate('Login')}
       />
@@ -65,6 +69,26 @@ const List = () => {
       <Box
         title="[Social Media] Messages"
         onPress={() => navigation.navigate('Messages')}
+      />
+      <Box
+        title="[Firebase Auth] Anonymous"
+        onPress={() => navigation.navigate('Anonymous')}
+      />
+      <Box
+        title="[Firebase Auth] Email & Password"
+        onPress={() => navigation.navigate('EmailPass')}
+      />
+      <Box
+        title="[Firebase Auth] Google"
+        onPress={() => navigation.navigate('Google')}
+      />
+      <Box
+        title="[Firebase Auth] Phone"
+        onPress={() => navigation.navigate('Phone')}
+      />
+      <Box
+        title="[Firebase Auth] Admob"
+        onPress={() => navigation.navigate('Admob')}
       />
     </SafeAreaView>
   );

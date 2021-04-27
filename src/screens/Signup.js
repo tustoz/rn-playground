@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import {Input, Button, SocialIcon} from 'react-native-elements';
-import {StyleSheet, SafeAreaView, View, Text, StatusBar, Alert} from 'react-native';
+import {StyleSheet, SafeAreaView, View, Text, StatusBar} from 'react-native';
 import auth from '@react-native-firebase/auth';
 import colors from '../constants/colors';
 
-const Login = ({navigation}) => {
+const Signup = ({navigation}) => {
   const [email, setEmail] = useState('');
   const [password, setPass] = useState('');
 
@@ -29,11 +29,14 @@ const Login = ({navigation}) => {
       .then(() => console.log('User signed out!'));
   };
 
-  const LoginUser = () => {
+  const CreateUser = () => {
     auth()
-      .signInWithEmailAndPassword(email, password)
+      .createUserWithEmailAndPassword(
+        email,
+        password,
+      )
       .then(() => {
-        console.log('User account signed in!');
+        console.log('User account created & signed in!');
       })
       .catch(error => {
         if (error.code === 'auth/email-already-in-use') {
@@ -59,7 +62,7 @@ const Login = ({navigation}) => {
           animated={true}
         />
         <View>
-          <Text style={styles.logo}>Login</Text>
+          <Text style={styles.logo}>Register</Text>
         </View>
         <View style={styles.box}>
           <Input
@@ -70,6 +73,7 @@ const Login = ({navigation}) => {
             errorStyle={{color: 'red'}}
             onChangeText={email => setEmail(email)}
             autoCorrect={false}
+            autoCapitalize={false}
           />
           <Input
             label="Password"
@@ -80,8 +84,9 @@ const Login = ({navigation}) => {
             onChangeText={password => setPass(password)}
             secureTextEntry={true}
             autoCorrect={false}
+            autoCapitalize={false}
           />
-          <Button title="Login" onPress={LoginUser} />
+          <Button title="Sign Up" onPress={CreateUser} />
           <Text
             style={{
               fontSize: 20,
@@ -92,9 +97,9 @@ const Login = ({navigation}) => {
             }}>
             OR
           </Text>
-          <SocialIcon title="Sign In With Facebook" button type="facebook" />
+          <SocialIcon title="Sign Up With Facebook" button type="facebook" />
           <SocialIcon
-            title="Sign In With Instagram"
+            title="Sign Up With Instagram"
             button
             type="instagram"
             style={{backgroundColor: colors.rose}}
@@ -113,7 +118,7 @@ const Login = ({navigation}) => {
   );
 };
 
-export default Login;
+export default Signup;
 
 const styles = StyleSheet.create({
   page: {
@@ -147,5 +152,4 @@ const styles = StyleSheet.create({
     paddingHorizontal: 25,
     paddingVertical: 25,
   },
-  input: {},
 });
